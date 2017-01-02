@@ -7,13 +7,10 @@ if (window.XMLHttpRequest) {
 }
 
 // an asynchronous request
-request.open('GET', 'data.txt');
+request.open('GET', 'data.xml');
 request.onreadystatechange = function() {
   if ((request.readyState === 4) && (request.status === 200)) {
-    var modify = document.getElementsByTagName('li');
-    for (var i = 0; i < modify.length; i++) {
-      modify[i].innerHTML = request.responseText;
-    }
+    console.log(request.responseXML);
   }
 }
 request.send();
