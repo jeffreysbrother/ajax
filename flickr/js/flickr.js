@@ -1,6 +1,10 @@
 $("form").submit(function(e) {
   e.preventDefault();
   var $searchField = $('#search');
+  var $submitButton = $('#submit');
+
+  $searchField.prop("disabled", true);
+  $submitButton.attr("disabled", true).val("searching...");
   var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
   var animal = $searchField.val();
   var flickrOptions = {
@@ -16,6 +20,8 @@ $("form").submit(function(e) {
     });
     photoHTML += '</ul>';
     $('#photos').html(photoHTML);
+    $searchField.prop("disabled", false);
+    $submitButton.attr("disabled", false).val("Search");
   }
   $.getJSON(flickrAPI, flickrOptions, displayPhotos);
 });
