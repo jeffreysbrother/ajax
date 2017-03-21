@@ -1,8 +1,8 @@
-$("button").click(function() {
-  $("button").removeClass("selected");
-  $(this).addClass("selected");
+$("form").submit(function(e) {
+  e.preventDefault();
+  var $searchField = $('#search');
   var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-  var animal = $(this).text();
+  var animal = $searchField.val();
   var flickrOptions = {
     tags: animal,
     format: "json"
