@@ -1,4 +1,4 @@
-##AJAX experiment##
+##AJAX experiment
 
 The idea for this came from the [AJAX Basics](https://teamtreehouse.com/library/ajax-basics) course on Treehouse.
 
@@ -20,12 +20,14 @@ $("form").submit(function(e) {
 
   $searchField.prop("disabled", true);
   $submitButton.attr("disabled", true).val("searching...");
+
   var flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
   var animal = $searchField.val();
   var flickrOptions = {
     tags: animal,
     format: "json"
   };
+
   var displayPhotos = function(data) {
     var photoHTML = '<ul>';
     $.each(data.items, function(i, photo) {
