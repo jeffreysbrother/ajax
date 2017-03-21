@@ -1,4 +1,5 @@
 var mybutton = document.getElementById('loadbutton');
+
 mybutton.onclick = function() {
   // support for older browsers (IE?)
   var request;
