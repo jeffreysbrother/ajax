@@ -1,4 +1,4 @@
-##AJAX experiment
+## AJAX experiment
 
 The idea for this came from the [AJAX Basics](https://teamtreehouse.com/library/ajax-basics) course on Treehouse.
 
