@@ -2077,4 +2077,11 @@ input[type=search] {
   body {
     padding: 15px 0 0;
   }
+  #photos .image {
+    min-height: auto;
+    height: auto;
+  }
+  #photos img {
+    max-width: 100%;
+  }
 }
