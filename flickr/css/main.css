@@ -2065,3 +2065,11 @@ footer p {
 input[type=search] {
   font-size: 2em;
 }
+
+@media screen and (max-width: 767px) {
+  input[type=search] {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
